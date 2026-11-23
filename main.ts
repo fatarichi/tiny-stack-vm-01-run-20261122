@@ -31,7 +31,7 @@ case 52:if(!c)return d(8);pc=C[--c];break;
 case 64:{let a=D[s-1];if(a<0||a>255)return d(6);D[s-1]=Y[a];break;}
 case 65:{let a=D[s-1];if(a<0||a>255)return d(6);Y[a]=D[s-2];s-=2;break;}
 case 80:{let g=''+D[s-1];if(l+g.length>65536)return d(11);s--;for(let k=0;k<g.length;k++)o[l++]=g.charCodeAt(k);break;}
-case 81:if(l+1>65536)return d(11);o[l++]=D[--s]&255;break;
+case 81:if(l>=65536)return d(11);o[l++]=D[--s]&255;break;
 case 82:D[s++]=i<q.length?q[i++]:-1;break;
 case 83:return d(D[--s]&255);
 default:{
